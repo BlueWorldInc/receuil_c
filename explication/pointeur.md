@@ -31,7 +31,7 @@ int val = 0;
 val = *p_prix;
 ```
 
-Le * devant p_prix permet cette fois ci de déréférencer. Alors que lors de la création l'étoile indique que la valeur est de type pointeur. Du coup val vaut 300.
+Le * devant p_prix permet cette fois ci de déréférencer. Alors que lors de la création l'étoile indique que la valeur est de type pointeur. Du coup val vaut 3000.
 
 Avec les fonctions
 
