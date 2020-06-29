@@ -39,3 +39,19 @@ Pour faire cela on fait:
 ```
 
 Ainsi à l'emplacement mémoire p_avion il y a la valeur 350.
+
+
+## Le Free
+
+Après avoir demander à l'OS d'allouer de l'espace à notre programme il est judicieux de faire ce que l'on appel un free, c'est à dire libérer cette espace. On dit à l'OS que l'on à plus besoin de cette espace, et qu'il peut donc etre utiliser par un autre programme. Si l'on fait pas cela, ou que l'on ne le fait pas correctement notre programme sera sujet à des "memory leak", c'est à dire des fuites de mémoires. Derrière ces mots un peu effrayant il y a juste le fait que notre programme prend de plus en plus d'espace mémoire, ce qu'il fait qu'il peut utiliser bien plus de RAM que nécaissaire, cela peut même faire planter le programme si y'a plus de RAM disponible.
+
+Pour cela on fait:
+
+```c
+  free(p_avion);
+```
+
+On met en paramètre de free tout simplement le pointeur (la variable) qui contient l'adresse de l'emplacement mémoire qui nous avez était allouer.
+//Après cette opération notre pointeur ne pointe plus vers l'emplacement mémoire précedent.
+
+// est ce qu'il faut mettre NULL avant de faire une free? Ca serait intéressant de le savoir et ca parait logique. *p_avion = NULL
