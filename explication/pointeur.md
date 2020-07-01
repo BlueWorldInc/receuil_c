@@ -107,7 +107,9 @@ Pour ce faire:
 	void printMsg(char* msg);
 	int main()
 	{
-		// initialization du pointeur sur fonction, void est le type de retour de la fonction pointé vers, entre les () on met les paramètres que prend cette fonction et printH est 			le nom de la fonction
+		// initialization du pointeur sur fonction, void est le type de retour de la fonction
+		// pointé vers, entre les () on met les paramètres que prend cette fonction et printH 
+		// est le nom de la fonction
 		void (*printH)();
 		
 		// on assigne la fonction printHello au pointeur printH
