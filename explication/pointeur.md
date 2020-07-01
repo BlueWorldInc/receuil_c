@@ -99,7 +99,7 @@ Egalement:
 
 ## Concept Avancée, les pointeur sur fonction
 
-Avec les pointeurs peut également pointer sur une fonction, le pointeur stockera alors l'adresse d'une fonction au lieur de l'adresse d'une variable. Lorsque l'on dereferencera le pointeur on pourra alors utiliser la fonction. C'est utile lors de l'utilisation en parralèle avec les structs pour que celle-ci resemble à des classes.
+Avec les pointeurs on peut également pointer sur une fonction, le pointeur stockera alors l'adresse d'une fonction au lieur de l'adresse d'une variable. Lorsque l'on dereferencera le pointeur on pourra alors utiliser la fonction. C'est utile lors de l'utilisation en parralèle avec les structs pour que celle-ci resemble à des classes.
 
 Pour ce faire:
 ```c
