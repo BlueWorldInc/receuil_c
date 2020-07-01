@@ -95,3 +95,37 @@ Egalement:
   p_x = 000EF17;
   000EF17 = 7
 ```
+
+
+## Concept Avancée, les pointeur sur fonction
+
+Avec les pointeurs peut également pointer sur une fonction, le pointeur stockera alors l'adresse d'une fonction au lieur de l'adresse d'une variable. Lorsque l'on dereferencera le pointeur on pourra alors utiliser la fonction. C'est utile lors de l'utilisation en parralèle avec les structs pour que celle-ci resemble à des classes.
+
+Pour ce faire:
+```c
+	void printHello();
+	void printMsg(char* msg);
+	int main()
+	{
+		// initialization du pointeur sur fonction, void est le type de retour de la fonction pointé vers, entre les () on met les paramètres que prend cette fonction et printH est 			le nom de la fonction
+		void (*printH)();
+		
+		// on assigne la fonction printHello au pointeur printH
+    	printH = &printHello;
+		// on fait l'initialization et l'assignation en même temps
+    	void (*printM)(char* msg) = &printMsg;
+
+		(*printH)();
+    	(*printM)("Mais comment ca va mon pote ?");
+
+	    return 0;
+	}
+
+	void printHello() {
+    	printf("Hello\n");
+	}
+
+	void printMsg(char* msg) {
+    	printf("%s\n", msg);
+	}
+```
