@@ -69,3 +69,46 @@ On fait comme suit:
       printf("%s\n", msg);
     }
 ```
+
+#### On peut également simuler le this
+
+```c
+
+
+  struct keyValuePair {
+      int key;
+      int lastIndex;
+      void (*multiT)(struct keyValuePair* k);
+  };
+
+  void multiTwo(struct keyValuePair* k);
+
+  int main()
+  {
+      struct keyValuePair k;
+      k.key = 7;
+      k.lastIndex = 15;
+      // assignation
+      k.multiT = &multiTwo;
+
+      // utilisation
+      k.multiT(&k); // methode 1, k.key = 14.
+      multiTwo(&k); // methode 2, k.key = 28 maintenant.
+      
+      return 0;
+   }
+
+  void multiTwo(struct keyValuePair* k) {
+      (*k).key = (*k).key * 2;
+  }
+
+```
+
+La méthode 1 est la méthode utiliser pour le compilateur C++ pour simuler le this.
+
+```
+  You will of course have to pass the pointer to the struct into every call to push and similar methods.
+  This is essentially what the C++ compiler is doing for you when you define Stack as a class and push et al as methods.
+        answered Dec 14 '10 at 18:14
+        NPE
+```
