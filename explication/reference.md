@@ -44,3 +44,7 @@ C'est avant tout une question de syntaxe, au lieu d'avoir à ce soucier de crée
 
 En clair c'est comme si c'était un raccourcie. On délégue notre boulot à la fonction en lui donnant l'instruction à la création de celle ci (dans la signature).
 La deuxième utilité, d'après ce que j'ai lu, c'est que ca permet au compilateur de faire des optimisations. Car il sait qu'une référence ne peut avoir qu'une seul variable sous jacente et ne peut etre null, contrairement à un pointeur.
+
+Source: 
+-https://openclassrooms.com/fr/courses/1421911-du-c-au-c/1422263-nouveautes-pour-les-variables
+-https://stackoverflow.com/a/101406
