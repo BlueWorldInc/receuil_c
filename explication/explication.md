@@ -1,7 +1,9 @@
 # Explication
 
-[Pointeur](./pointeur.md).
+[Pointeur](./pointeur.md)
 
-[Malloc](./malloc.md).
+[Malloc](./malloc.md)
 
-[Struct](./struct.md).
+[Struct](./struct.md)
+
+[Reference](./reference.md)
